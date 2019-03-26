@@ -9,8 +9,17 @@
     3.通过@ConfigurationProperties(prefix="config.redis")来批量注入属性
     3.通过@PropertySource来指定加载的资源文件，默认只会加载app.properties
     和file.xml文件，对于yml我们需要实现PropertySourceFactory#createPropertySource
-    方法。
-    
+    方法。例如：
+    public class DefaultYamlPropertySourceFactory implements PropertySourceFactory {
+        @Override
+        public PropertySource<?> createPropertySource(String name, EncodedResource resource) throws IOException {
+            List<PropertySource<?>> sources = new YamlPropertySourceLoader()
+                    .load(resource.getResource().getFilename(),
+                            resource.getResource());
+            return sources.get(0);
+        }
+    }
+
 >@ConfigurationProperties注解和@Value注解的区别：
 
     1.@ConfigurationProperties能够批量注入配置文件的属性。@Value只能一个个指定。
