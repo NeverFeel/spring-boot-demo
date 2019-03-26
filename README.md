@@ -7,7 +7,7 @@
     1.对于属性注入来说，只能注入已被加载到spring容器中的属性。
     2.通过@Value("${...}")方式来指定注入的属性
     3.通过@ConfigurationProperties(prefix="config.redis")来批量注入属性
-    3.通过@PropertySource来指定加载的资源文件，默认只会加载app.properties
+    4.通过@PropertySource来指定加载的资源文件，默认只会加载app.properties
     和file.xml文件，对于yml我们需要实现PropertySourceFactory#createPropertySource
     方法。例如：
     public class DefaultYamlPropertySourceFactory implements PropertySourceFactory {
