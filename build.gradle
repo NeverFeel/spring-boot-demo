@@ -37,6 +37,7 @@ dependencies {
     compile(
             "org.springframework.boot:spring-boot-starter-web",
             "org.springframework.boot:spring-boot-starter-test",
+            "org.springframework.boot:spring-boot-loader",
             "junit:junit:4.12"
     )
 }
