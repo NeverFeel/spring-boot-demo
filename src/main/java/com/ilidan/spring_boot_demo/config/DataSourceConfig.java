@@ -1,6 +1,7 @@
 package com.ilidan.spring_boot_demo.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 //需要提供getter和setter，否则启动时会报错
 @ConfigurationProperties(prefix = "config.mysql")

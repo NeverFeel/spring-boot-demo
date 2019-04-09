@@ -19,6 +19,7 @@
             return sources.get(0);
         }
     }
+    5.通过@ConfigurationProperties+@EnableConfigurationProperties组合注解
 
 >@ConfigurationProperties注解和@Value注解的区别：
 

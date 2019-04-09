@@ -12,10 +12,10 @@ public class ApplicationConfig {
         return new DefaultUserConfig();
     }
 
-    @Bean
-    public DataSourceConfig dataSourceConfig() {
-        return new DataSourceConfig();
-    }
+//    @Bean
+//    public DataSourceConfig dataSourceConfig() {
+//        return new DataSourceConfig();
+//    }
 
     @Bean
     public RedisConfig redisConfig() {
