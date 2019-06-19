@@ -26,7 +26,7 @@ public class SpringApplicationBootstrap {
 
         //判断bean是否存在
         System.out.println("myFirstRepository bean : "+ myFirstRepository);
-
+        context.close();
     }
 
 }
