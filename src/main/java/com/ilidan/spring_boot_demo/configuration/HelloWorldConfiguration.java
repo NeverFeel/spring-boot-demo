@@ -11,6 +11,7 @@ public class HelloWorldConfiguration {
 
     @Bean
     public String helloWorld(){
+        System.out.println("HelloWorldConfiguration#helloWorld invoked!");
         return "Hello, world!";
     }
 

@@ -14,7 +14,8 @@ public class ConditionOnSystemPropertyBootstrap {
 
     @Bean
     @ConditionOnSystemProperty(name = "user.name", value = "lidan_Y")
-    public String helloWorld(){
+    public String helloWorld2(){
+        System.out.println("ConditionOnSystemPropertyBootstrap#helloWorld2 invoked!");
         return "hello world!";
     }
 
@@ -23,7 +24,7 @@ public class ConditionOnSystemPropertyBootstrap {
         ConfigurableApplicationContext applicationContext =
                 new SpringApplicationBuilder(ConditionOnSystemPropertyBootstrap.class)
                         .web(WebApplicationType.NONE).run(args);
-        String helloWorld = applicationContext.getBean("helloWorld", String.class);
+        String helloWorld = applicationContext.getBean("helloWorld2", String.class);
         System.out.println(helloWorld);
 
         applicationContext.close();
